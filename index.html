@@ -20,7 +20,16 @@
         <li class="list-item"><a href="#">Home</a></li>
         <li class="list-item"><a href="#">Services</a></li>
         <li class="list-item"><a href="#">About</a></li>
-        <li class="list-item"><a href="#">Contact</a></li>
+        <li class="list-item"><a href="#">Contact</a><ion-icon id="contact-arrow" name="chevron-down-outline"></ion-icon>
+          <div id="contact-drop-id" class="hide">
+            <ul class="contact-list">
+              <li>Phone</li>
+              <li>Email</li>
+              <li>Facebook</li>
+              <li>Address</li>
+            </ul>
+          </div>
+        </li>
         <li class="list-item"><a href="#">Testimonials</a></li>
       </ul>
     </nav>
@@ -28,12 +37,15 @@
 
   <div class="main-container">
     <section class="section">
+      <div class="article-image"></div>
       <article class="article">
-
+        <div class="tester"></div>
       </article>
     </section>
   </div>
 
   <script src="./scripts.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
