@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -13,12 +14,14 @@ body {
 }
 
 .header {
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0;
+  position: relative;
   /* v--- uncomment for fixed header height, otherwise it adjusts for logo size ---v  */
   /* height: 50vh; */
 }
@@ -33,11 +36,21 @@ body {
   justify-content: center;
 }
 
+#menu-icon {
+  font-size: 42px;
+  color: black;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
 .navbar {
   width: 100%;
   height: 50px;
   background-color: black;
   background: linear-gradient(to right, #7b0618, #e60b2b, #0030ac, #001751);
+  display: flex;
+  justify-content: center;
 }
 
 .nav-list {
@@ -50,7 +63,6 @@ body {
   align-items: center;
   flex-direction: row;
   font-size: 1.1em;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .list-item {
@@ -127,6 +139,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom, #fff, rgb(220, 219, 219));
+  font-weight: 500;
 }
 
 .contact-list li:hover {
@@ -135,6 +148,10 @@ body {
 
 .hide {
   display: none;
+}
+
+.show {
+  display: block;
 }
 
 .main-container {
@@ -176,18 +193,87 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  position: absolute;
-  top: 15%;
-  left: 15%;
 }
 
 .article {
   width: 45%;
   height: 60%;
-  background-color: rgba(204, 204, 204, 0.93);
+  background-color: rgba(204, 204, 204, 0.8);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  position: absolute;
-  bottom: 15%;
-  right: 15%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+
+.article h1 {
+  font-size: 36px;
+}
+
+.article p {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    width: 100%;
+    height: 30vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 0;
+    margin-left: 30px;
+  }
+
+  #menu-icon {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .navbar {
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    height: 15px;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: block;
+    background: linear-gradient(to bottom, #fff, rgb(220, 219, 219));
+    display: none;
+  }
+
+  .list-item a {
+    color: black;
+    font-weight: 500;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .article {
+    width: 80%;
+    margin: 30px;
+  }
+
+  .article-image {
+    width: 80%;
+    margin: 30px;
+  }
 }
